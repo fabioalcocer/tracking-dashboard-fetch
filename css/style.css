@@ -1,0 +1,140 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --blue: hsl(246, 80%, 60%);
+  --softBluePlay: hsl(195, 74%, 62%);
+  --lightRedWork: hsl(15, 100%, 70%);
+  --limeGreenExercise: hsl(145, 58%, 55%);
+  --violetSocial: hsl(264, 64%, 52%);
+  --softOrangeSelfcare: hsl(43, 84%, 65%);
+
+  --veryDarkBlue: hsl(226, 43%, 10%);
+  --darkBlue: hsl(235, 46%, 20%);
+  --desaturatedBlue: hsl(235, 45%, 61%);
+  --paleBlue: hsl(236, 100%, 87%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  height: 100vh;
+  background-color: var(--veryDarkBlue);
+}
+
+.main {
+  width: min(100%, 1440px);
+  height: 100vh;
+  padding: 2rem 1.5rem;
+  color: var(--white);
+}
+
+.control__card {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--darkBlue);
+  border-radius: 1rem;
+}
+
+.control__head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  border-radius: 1rem;
+  padding: 1.5rem 1rem;
+  background-color: var(--blue);
+}
+
+.control__head img {
+  width: 70px;
+  border: 3px solid var(--white);
+  border-radius: 50%;
+}
+
+.control__info h3 {
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.control__info p {
+  font-weight: 300;
+  font-size: 15px;
+  color: var(--paleBlue);
+}
+
+.control__nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.4rem 1rem;
+  margin-left: 7px;
+}
+
+.nav__item {
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--desaturatedBlue);
+  cursor: pointer;
+}
+
+.card {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8rem 1.5rem;
+  border-radius: 1rem;
+  background-color: var(--darkBlue);
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  top: -40px;
+  left: 0;
+  right: 0;
+  background: url(../assets/icon-work.svg) right no-repeat;
+  background-color: coral;
+  border-radius: 1rem;
+  z-index: -1;
+}
+
+.card__stats {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.stats__name {
+  font-size: 18px;
+}
+
+.stats__hours {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.card__last {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+
+.card__ellipsis {
+  align-self: flex-end;
+}
+
+.last__week {
+  font-size: 15px;
+  color: var(--paleBlue);
+}
