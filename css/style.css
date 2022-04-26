@@ -3,6 +3,7 @@
   --blue: hsl(246, 80%, 60%);
   --softBluePlay: hsl(195, 74%, 62%);
   --lightRedWork: hsl(15, 100%, 70%);
+  --lightRedStudy: hsl(348, 100%, 68%);
   --limeGreenExercise: hsl(145, 58%, 55%);
   --violetSocial: hsl(264, 64%, 52%);
   --softOrangeSelfcare: hsl(43, 84%, 65%);
@@ -27,8 +28,8 @@ body {
 
 .main {
   width: min(100%, 1440px);
-  height: 100vh;
-  padding: 2rem 1.5rem;
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
   color: var(--white);
 }
 
@@ -85,26 +86,58 @@ body {
 .card {
   margin-top: 5rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.8rem 1.5rem;
+  flex-direction: column;
   border-radius: 1rem;
   background-color: var(--darkBlue);
   position: relative;
 }
 
-.card::before {
-  content: "";
+.card__banner {
   position: absolute;
-  width: 100%;
-  height: 70px;
-  top: -40px;
+  top: -42px;
   left: 0;
   right: 0;
-  background: url(../assets/icon-work.svg) right no-repeat;
-  background-color: coral;
+  display: flex;
+  padding-right: 1rem;
   border-radius: 1rem;
+  background-position: right;
   z-index: -1;
+}
+
+.work .card__banner {
+  background-color: var(--lightRedWork);
+}
+
+.play .card__banner {
+  background-color: var(--softBluePlay);
+}
+
+.study .card__banner {
+  background-color: var(--lightRedStudy);
+}
+
+.exercise .card__banner {
+  background-color: var(--limeGreenExercise);
+}
+
+.social .card__banner {
+  background-color: var(--violetSocial);
+}
+
+.self-care .card__banner {
+  background-color: var(--softOrangeSelfcare);
+}
+
+.card__banner img {
+  margin-left: auto;
+}
+
+.card__info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8rem 1.5rem;
 }
 
 .card__stats {
