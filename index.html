@@ -29,9 +29,9 @@
           </div>
         </div>
         <div class="control__nav">
-          <a href="#" class="nav__item">Daily</a>
-          <a href="#" class="nav__item">Weekly</a>
-          <a href="#" class="nav__item">Monthly</a>
+          <a href="#" class="nav__item" data-time="daily">Daily</a>
+          <a href="#" class="nav__item active" data-time="weekly">Weekly</a>
+          <a href="#" class="nav__item" data-time="monthly">Monthly</a>
         </div>
       </article>
 
@@ -42,11 +42,11 @@
         <div class="card__info">
           <div class="card__stats">
             <p class="stats__name">Work</p>
-            <p class="stats__hours">00hrs</p>
+            <p class="stats__hours" data-habit="Work">00hrs</p>
           </div>
-          <div class="card__last">
+          <div class="card__prev">
             <img src="./assets/icon-ellipsis.svg" class="card__ellipsis">
-            <p class="last__week">Last Week - <span>00hrs</span></p>
+            <p class="prev__stats" data-prev="Work">Last Week - 00hrs</p>
           </div>
         </div>
       </article>
@@ -57,12 +57,12 @@
         </div>
         <div class="card__info">
           <div class="card__stats">
-            <p class="stats__name">Work</p>
-            <p class="stats__hours">00hrs</p>
+            <p class="stats__name">Play</p>
+            <p class="stats__hours" data-habit="Play">00hrs</p>
           </div>
-          <div class="card__last">
+          <div class="card__prev">
             <img src="./assets/icon-ellipsis.svg" class="card__ellipsis">
-            <p class="last__week">Last Week - <span>00hrs</span></p>
+            <p class="prev__stats" data-prev="Play">Last Week - 00hrs</p>
           </div>
         </div>
       </article>
@@ -73,12 +73,12 @@
         </div>
         <div class="card__info">
           <div class="card__stats">
-            <p class="stats__name">Work</p>
-            <p class="stats__hours">00hrs</p>
+            <p class="stats__name">Study</p>
+            <p class="stats__hours" data-habit="Study">00hrs</p>
           </div>
-          <div class="card__last">
+          <div class="card__prev">
             <img src="./assets/icon-ellipsis.svg" class="card__ellipsis">
-            <p class="last__week">Last Week - <span>00hrs</span></p>
+            <p class="prev__stats" data-prev="Study">Last Week - 00hrs</p>
           </div>
         </div>
       </article>
@@ -89,12 +89,12 @@
         </div>
         <div class="card__info">
           <div class="card__stats">
-            <p class="stats__name">Work</p>
-            <p class="stats__hours">00hrs</p>
+            <p class="stats__name">Exercise</p>
+            <p class="stats__hours" data-habit="Exercise">00hrs</p>
           </div>
-          <div class="card__last">
+          <div class="card__prev">
             <img src="./assets/icon-ellipsis.svg" class="card__ellipsis">
-            <p class="last__week">Last Week - <span>00hrs</span></p>
+            <p class="prev__stats" data-prev="Exercise">Last Week - 00hrs</p>
           </div>
         </div>
       </article>
@@ -105,12 +105,12 @@
         </div>
         <div class="card__info">
           <div class="card__stats">
-            <p class="stats__name">Work</p>
-            <p class="stats__hours">00hrs</p>
+            <p class="stats__name">Social</p>
+            <p class="stats__hours" data-habit="Social">00hrs</p>
           </div>
-          <div class="card__last">
+          <div class="card__prev">
             <img src="./assets/icon-ellipsis.svg" class="card__ellipsis">
-            <p class="last__week">Last Week - <span>00hrs</span></p>
+            <p class="prev__stats" data-prev="Social">Last Week - 00hrs</p>
           </div>
         </div>
       </article>
@@ -121,16 +121,17 @@
         </div>
         <div class="card__info">
           <div class="card__stats">
-            <p class="stats__name">Work</p>
-            <p class="stats__hours">00hrs</p>
+            <p class="stats__name">Self Care</p>
+            <p class="stats__hours" data-habit="Self Care">00hrs</p>
           </div>
-          <div class="card__last">
+          <div class="card__prev">
             <img src="./assets/icon-ellipsis.svg" class="card__ellipsis">
-            <p class="last__week">Last Week - <span>00hrs</span></p>
+            <p class="prev__stats" data-prev="Self Care">Last Week - 00hrs</p>
           </div>
         </div>
       </article>
 
     </main>
+    <script src="./js/app.js"></script>
   </body>
 </html>

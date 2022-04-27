@@ -83,6 +83,10 @@ body {
   cursor: pointer;
 }
 
+.nav__item.active {
+  color: var(--white);
+}
+
 .card {
   margin-top: 5rem;
   display: flex;
@@ -149,6 +153,7 @@ body {
 
 .stats__name {
   font-size: 18px;
+  font-weight: 500;
 }
 
 .stats__hours {
@@ -156,18 +161,18 @@ body {
   font-weight: 300;
 }
 
-.card__last {
+.card__prev {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1.6rem;
+  gap: 1.7rem;
 }
 
 .card__ellipsis {
   align-self: flex-end;
 }
 
-.last__week {
+.prev__stats {
   font-size: 15px;
   color: var(--paleBlue);
 }
