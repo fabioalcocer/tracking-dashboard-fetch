@@ -27,10 +27,11 @@ body {
 }
 
 .main {
-  width: min(100%, 1440px);
+  width: min(100%, 1100px);
   min-height: 100vh;
   padding: 3rem 1.5rem;
   color: var(--white);
+  display: grid;
 }
 
 .control__card {
@@ -81,6 +82,12 @@ body {
   text-decoration: none;
   color: var(--desaturatedBlue);
   cursor: pointer;
+  transition: 0.4s;
+}
+
+.nav__item:hover {
+  color: var(--white);
+  transition: 0.4s;
 }
 
 .nav__item.active {
@@ -94,11 +101,17 @@ body {
   border-radius: 1rem;
   background-color: var(--darkBlue);
   position: relative;
+  transition: 0.2s;
+}
+
+.card:hover {
+  background-color: hsl(239, 26%, 41%);
+  transition: 0.2s;
 }
 
 .card__banner {
   position: absolute;
-  top: -42px;
+  top: -40px;
   left: 0;
   right: 0;
   display: flex;
@@ -124,6 +137,10 @@ body {
   background-color: var(--limeGreenExercise);
 }
 
+.exercise__img {
+  width: 45%;
+}
+
 .social .card__banner {
   background-color: var(--violetSocial);
 }
@@ -141,14 +158,26 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.8rem 1.5rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.7rem 1.5rem;
 }
 
 .card__stats {
+  width: 100%;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   gap: 0.3rem;
+}
+
+.card__stats svg {
+  cursor: pointer;
+}
+
+.card__stats svg:hover path {
+  fill: var(--white);
+  transition: 0.2s;
 }
 
 .stats__name {
@@ -156,23 +185,95 @@ body {
   font-weight: 500;
 }
 
+.card__prev {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .stats__hours {
   font-size: 2rem;
   font-weight: 300;
 }
 
-.card__prev {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1.7rem;
-}
-
-.card__ellipsis {
-  align-self: flex-end;
-}
-
 .prev__stats {
   font-size: 15px;
   color: var(--paleBlue);
+}
+
+@media (min-width: 560px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main {
+    grid-template-areas:
+      "control card card card"
+      "control card card card";
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 250px 250px;
+    place-content: center;
+    place-items: center;
+    gap: 2rem;
+  }
+
+  .control__card {
+    margin-top: -39px;
+    height: 96%;
+    grid-area: control;
+  }
+
+  .control__head {
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    height: 67%;
+  }
+
+  .control__head img {
+    width: 90px;
+  }
+
+  .control__info h3 {
+    font-size: 2.4rem;
+  }
+
+  .control__nav {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 1.4rem;
+    margin-left: 7px;
+    height: 32%;
+  }
+
+  .card {
+    margin-top: 0px;
+    width: 100%;
+  }
+
+  .card__info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 1.4rem;
+    gap: 1.1rem;
+  }
+
+  .card__prev {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .stats__hours {
+    font-size: 3rem;
+  }
 }

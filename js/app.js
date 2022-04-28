@@ -47,22 +47,20 @@ tabs.forEach((item) => {
 
 
 const showDailyStats = async () => {
-
   currentHours.forEach(element => {
     let currentData = element.dataset.habit
     let currentTime = globalData.filter(el => el.title === currentData)[0]
     element.textContent = `${currentTime.timeframes[time].current}hrs`
   })
+
   prevStats.forEach(element => {
     let prevData = element.dataset.prev
     let prevTime = globalData.filter(el => el.title === prevData)[0]
     element.textContent = `Lasts ${time} ${prevTime.timeframes[time].previous}hrs`
   })
-
 }
 
 const showWeeklyStats = async () => {
-
   currentHours.forEach(element => {
     let currentData = element.dataset.habit
     let currentTime = globalData.filter(el => el.title === currentData)[0]
@@ -74,11 +72,9 @@ const showWeeklyStats = async () => {
     let prevTime = globalData.filter(el => el.title === prevData)[0]
     element.textContent = `Lasts ${time} ${prevTime.timeframes[time].previous}hrs`
   })
-
 }
 
 const showMonthlyStats = async () => {
-
   currentHours.forEach(element => {
     let currentData = element.dataset.habit
     let currentTime = globalData.filter(el => el.title === currentData)[0]
@@ -90,5 +86,4 @@ const showMonthlyStats = async () => {
     let prevTime = globalData.filter(el => el.title === prevData)[0]
     element.textContent = `Lasts ${time} ${prevTime.timeframes[time].previous}hrs`
   })
-
 }
