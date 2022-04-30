@@ -26,7 +26,7 @@ document.addEventListener('click', (e) => {
 
 const getData = async () => {
   try {
-    const res = await fetch('../data.json')
+    const res = await fetch('../api/data.json')
     const data = await res.json()
     globalData.push(...data)
     showWeeklyStats()
